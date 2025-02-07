@@ -1,16 +1,31 @@
-/* 自定义样式 */
-body {
-    font-family: 'Inter', sans-serif;
+/* 通用样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box - sizing: border - box;
 }
 
-.swiper-container {
-    width: 100%;
-    height: 100%;
+/* 现有界面样式，假设已有 */
+.existing - interface {
+  /* 这里是已有界面的样式 */
 }
 
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+/* 圆角卡片样式 */
+.rounded - card {
+  background - color: #fff;
+  border - radius: 10px;
+  box - shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max - width: 600px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s linear, transform 0.5s linear;
+}
+
+/* 当卡片进入视口时的样式 */
+.rounded - card.active {
+  opacity: 1;
+  transform: translateY(0);
 }
